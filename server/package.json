@@ -1,0 +1,30 @@
+{
+  "name": "iot_smart_appliances_server",
+  "version": "1.0.0",
+  "description": "Web Server to control home appliances through Internet from any place in the world  ( using ESP32 ) ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IshanIITBBS/IOT_Smart_Appliances.git"
+  },
+  "author": "Mohd Ishan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IshanIITBBS/IOT_Smart_Appliances/issues"
+  },
+  "homepage": "https://github.com/IshanIITBBS/IOT_Smart_Appliances#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.0.3",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

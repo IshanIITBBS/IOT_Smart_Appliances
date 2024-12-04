@@ -1,0 +1,177 @@
+/* General Page Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.iot-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(145deg, #1e2a40, #2a3b55);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Status Indicator */
+.card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.card strong {
+  color: #4caf50;
+}
+
+/* Fan Card Slider */
+.slider {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+/* Toggle Button */
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.toggle-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.toggle-container input:checked + .toggle-slider {
+  background-color: #4caf50;
+}
+
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: 2.5px;
+  left: 2.5px;
+  transition: 0.4s;
+}
+
+.toggle-container input:checked + .toggle-slider:before {
+  transform: translateX(25px);
+}
+
+/* Mode Selection Buttons */
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.mode-buttons button {
+  background: linear-gradient(145deg, #3c4d69, #4b5f80);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-buttons button:hover {
+  background: #4caf50;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.5);
+}
+
+.mode-buttons button.active {
+  background: #4caf50;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.8);
+}
+
+/* Security Button */
+.movement-btn {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.movement-btn:hover {
+  background: #ff1744;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .iot-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
